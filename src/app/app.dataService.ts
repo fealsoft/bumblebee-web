@@ -7,6 +7,8 @@ import {NameEng} from "./NameEng";
 import {NameUkr} from "./NameUkr";
 import {SurnameEng} from "./SurnameEng";
 import {SurnameUkr} from "./SurnameUkr";
+import {GeographicEng} from "./GeographicEng";
+import {GeographicUkr} from "./GeographicUkr";
 
 
 @Injectable({
@@ -41,5 +43,13 @@ export class DataService {
 
   public allUkrainianSurnames(): Observable<SurnameUkr[]> {
     return this.httpClient.get<SurnameUkr[]>(this.REST_API_SERVER + '/surnames/ukr-all');
+  }
+
+  public allEnglishGeographic(): Observable<GeographicEng[]> {
+    return this.httpClient.get<GeographicEng[]>(this.REST_API_SERVER + '/geographic/eng-all');
+  }
+
+  public allUkrainianGeographic(): Observable<GeographicUkr[]> {
+    return this.httpClient.get<GeographicUkr[]>(this.REST_API_SERVER + '/geographic/ukr-all');
   }
 }

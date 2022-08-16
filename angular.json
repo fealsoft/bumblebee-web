@@ -37,8 +37,13 @@
               "src/app/words/words-translate/words-translate.component.css",
               "src/app/names/names-english/names-english.component.css",
               "src/app/names/names-ukrainian/names-ukrainian.component.css",
+              "src/app/names/names-translate/names-translate.component.css",
               "src/app/surnames/surnames-english/surnames-english.component.css",
-              "src/app/surnames/surnames-ukrainian/surnames-ukrainian.component.css"
+              "src/app/surnames/surnames-ukrainian/surnames-ukrainian.component.css",
+              "src/app/surnames/surnames-translate/surnames-translate.component.css",
+              "src/app/geographic/geographic-english/geographic-english.component.css",
+              "src/app/geographic/geographic-ukrainian/geographic-ukrainian.component.css",
+              "src/app/geographic/geographic-translate/geographic-translate.component.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules/"]

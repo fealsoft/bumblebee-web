@@ -32,8 +32,8 @@
   <div class="dropdown">
     <button mat-button [matMenuTriggerFor]="geographicMenu" class="myMenuItem">geographic</button>
     <mat-menu #geographicMenu="matMenu" yPosition="below" class="myMenu">
-      <button mat-menu-item class="myMenuItem">English</button>
-      <button mat-menu-item class="myMenuItem">Ukrainian</button>
+      <button mat-menu-item class="myMenuItem" routerLink="/geographic-english">English</button>
+      <button mat-menu-item class="myMenuItem" routerLink="/geographic-ukrainian">Ukrainian</button>
       <hr style="width:auto;">
       <button mat-menu-item class="myMenuItem" routerLink="/geographic-translate">Translate</button>
     </mat-menu>
