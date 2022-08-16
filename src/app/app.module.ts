@@ -13,6 +13,9 @@ import {WordsUkrainianComponent} from "./words/words-ukrainian/words-ukrainian.c
 import {WordsTranslateComponent} from "./words/words-translate/words-translate.component";
 import {NamesEnglishComponent} from "./names/names-english/names-english.component";
 import {NamesUkrainianComponent} from "./names/names-ukrainian/names-ukrainian.component";
+import {NamesTranslateComponent} from "./names/names-translate/names-translate.component";
+import {SurnamesTranslateComponent} from "./surnames/surnames-translate/surnames-translate.component";
+import {GeographicTranslateComponent} from "./geographic/geographic-translate/geographic-translate.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {NamesUkrainianComponent} from "./names/names-ukrainian/names-ukrainian.c
     WordsUkrainianComponent,
     WordsTranslateComponent,
     NamesEnglishComponent,
-    NamesUkrainianComponent
+    NamesUkrainianComponent,
+    NamesTranslateComponent,
+    SurnamesTranslateComponent,
+    GeographicTranslateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,10 @@ import {NamesUkrainianComponent} from "./names/names-ukrainian/names-ukrainian.c
       { path: 'words-ukrainian', component: WordsUkrainianComponent},
       { path: 'words-translate', component: WordsTranslateComponent},
       { path: 'names-english', component: NamesEnglishComponent},
-      { path: 'names-ukrainian', component: NamesUkrainianComponent}
+      { path: 'names-ukrainian', component: NamesUkrainianComponent},
+      { path: 'names-translate', component: NamesTranslateComponent},
+      { path: 'surnames-translate', component: SurnamesTranslateComponent},
+      { path: 'geographic-translate', component: GeographicTranslateComponent}
     ]),
   ],
   providers: [],
