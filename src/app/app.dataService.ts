@@ -5,6 +5,8 @@ import {WordEngLite} from "./WordEngLite";
 import {WordUkrLite} from "./WordUkrLite";
 import {NameEng} from "./NameEng";
 import {NameUkr} from "./NameUkr";
+import {SurnameEng} from "./SurnameEng";
+import {SurnameUkr} from "./SurnameUkr";
 
 
 @Injectable({
@@ -31,5 +33,13 @@ export class DataService {
 
   public allUkrainianNames(): Observable<NameUkr[]> {
     return this.httpClient.get<NameUkr[]>(this.REST_API_SERVER + '/names/ukr-all');
+  }
+
+  public allEnglishSurnames(): Observable<SurnameEng[]> {
+    return this.httpClient.get<SurnameEng[]>(this.REST_API_SERVER + '/surnames/eng-all');
+  }
+
+  public allUkrainianSurnames(): Observable<SurnameUkr[]> {
+    return this.httpClient.get<SurnameUkr[]>(this.REST_API_SERVER + '/surnames/ukr-all');
   }
 }

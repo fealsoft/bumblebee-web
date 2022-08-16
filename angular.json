@@ -36,7 +36,8 @@
               "src/app/words/words-ukrainian/words-ukrainian.component.css",
               "src/app/words/words-translate/words-translate.component.css",
               "src/app/names/names-english/names-english.component.css",
-              "src/app/names/names-ukrainian/names-ukrainian.component.css"
+              "src/app/names/names-ukrainian/names-ukrainian.component.css",
+              "src/app/surnames/surnames-english/surnames-english.component.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules/"]

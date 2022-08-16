@@ -16,6 +16,7 @@ import {NamesUkrainianComponent} from "./names/names-ukrainian/names-ukrainian.c
 import {NamesTranslateComponent} from "./names/names-translate/names-translate.component";
 import {SurnamesTranslateComponent} from "./surnames/surnames-translate/surnames-translate.component";
 import {GeographicTranslateComponent} from "./geographic/geographic-translate/geographic-translate.component";
+import {SurnamesEnglishComponent} from "./surnames/surnames-english/surnames-english.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {GeographicTranslateComponent} from "./geographic/geographic-translate/ge
     NamesEnglishComponent,
     NamesUkrainianComponent,
     NamesTranslateComponent,
+    SurnamesEnglishComponent,
     SurnamesTranslateComponent,
     GeographicTranslateComponent
   ],
@@ -46,6 +48,7 @@ import {GeographicTranslateComponent} from "./geographic/geographic-translate/ge
       { path: 'names-english', component: NamesEnglishComponent},
       { path: 'names-ukrainian', component: NamesUkrainianComponent},
       { path: 'names-translate', component: NamesTranslateComponent},
+      { path: 'surnames-english', component: SurnamesEnglishComponent},
       { path: 'surnames-translate', component: SurnamesTranslateComponent},
       { path: 'geographic-translate', component: GeographicTranslateComponent}
     ]),
