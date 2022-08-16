@@ -5,7 +5,14 @@
   "projects": {
     "bumblebee-web": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,8 +30,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/theme.scss",
+              "src/app/words/words-english/words-english.component.css",
+              "src/app/words/words-ukrainian/words-ukrainian.component.css",
+              "src/app/words/words-translate/words-translate.component.css",
+              "src/app/names/names-english/names-english.component.css",
+              "src/app/names/names-ukrainian/names-ukrainian.component.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
             "scripts": []
           },
           "configurations": {
