@@ -1,9 +1,7 @@
 .myMenu {
-
   padding: 0px ;
   margin : 0px;
   height: auto;
-
 }
 .myMenuItem {
   display:  flex;

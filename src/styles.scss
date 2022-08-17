@@ -2,9 +2,50 @@
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   margin: 0;
-  padding: 30px;
+  padding: 15px;
 }
 
-html, body {
-  height: 100%;
+
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.child {
+  display: flex;
+  margin: 0.5%;
+  padding: 1px;
+  border: 1px solid rgb(238, 184, 184);
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.lang-select {
+  width:140px;
+}
+
+.footer {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.name {
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.type {
+  color : green;
+  font-size: small;
+  font-style: italic;
+}
+
+.id {
+  color : #bdbdbd;
 }

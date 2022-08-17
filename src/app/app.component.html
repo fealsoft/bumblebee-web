@@ -1,42 +1,46 @@
-<div class="navbar">
-  <div class="dropdown">
-    <button mat-button [matMenuTriggerFor]="wordsMenu" class="myMenuItem">words</button>
-    <mat-menu #wordsMenu="matMenu" yPosition="below" class="myMenu">
-      <button mat-menu-item class="myMenuItem" routerLink="/words-english">English</button>
-      <button mat-menu-item class="myMenuItem" routerLink="/words-ukrainian">Ukrainian</button>
-      <hr style="width:auto;">
-      <button mat-menu-item class="myMenuItem" routerLink="/words-translate">Translate</button>
-    </mat-menu>
-  </div>
+<div class="parent">
+  <div class="child">
+    <div class="navbar">
+      <div class="dropdown">
+        <button mat-button [matMenuTriggerFor]="wordsMenu" class="myMenuItem">words</button>
+        <mat-menu #wordsMenu="matMenu" yPosition="below" class="myMenu">
+          <button mat-menu-item class="myMenuItem" routerLink="/words-english">English</button>
+          <button mat-menu-item class="myMenuItem" routerLink="/words-ukrainian">Ukrainian</button>
+          <hr style="width:auto;">
+          <button mat-menu-item class="myMenuItem" routerLink="/words-translate">Translate</button>
+        </mat-menu>
+      </div>
 
-  <div class="dropdown">
-    <button mat-button [matMenuTriggerFor]="namesMenu" class="myMenuItem">names</button>
-    <mat-menu #namesMenu="matMenu" yPosition="below" class="myMenu">
-      <button mat-menu-item class="myMenuItem" routerLink="/names-english">English</button>
-      <button mat-menu-item class="myMenuItem" routerLink="/names-ukrainian">Ukrainian</button>
-      <hr style="width:auto;">
-      <button mat-menu-item class="myMenuItem" routerLink="/names-translate">Translate</button>
-    </mat-menu>
-  </div>
+      <div class="dropdown">
+        <button mat-button [matMenuTriggerFor]="namesMenu" class="myMenuItem">names</button>
+        <mat-menu #namesMenu="matMenu" yPosition="below" class="myMenu">
+          <button mat-menu-item class="myMenuItem" routerLink="/names-english">English</button>
+          <button mat-menu-item class="myMenuItem" routerLink="/names-ukrainian">Ukrainian</button>
+          <hr style="width:auto;">
+          <button mat-menu-item class="myMenuItem" routerLink="/names-translate">Translate</button>
+        </mat-menu>
+      </div>
 
-  <div class="dropdown">
-    <button mat-button [matMenuTriggerFor]="surnamesMenu" class="myMenuItem">surnames</button>
-    <mat-menu #surnamesMenu="matMenu" yPosition="below" class="myMenu">
-      <button mat-menu-item class="myMenuItem" routerLink="/surnames-english">English</button>
-      <button mat-menu-item class="myMenuItem" routerLink="/surnames-ukrainian">Ukrainian</button>
-      <hr style="width:auto;">
-      <button mat-menu-item class="myMenuItem" routerLink="/surnames-translate">Translate</button>
-    </mat-menu>
-  </div>
+      <div class="dropdown">
+        <button mat-button [matMenuTriggerFor]="surnamesMenu" class="myMenuItem">surnames</button>
+        <mat-menu #surnamesMenu="matMenu" yPosition="below" class="myMenu">
+          <button mat-menu-item class="myMenuItem" routerLink="/surnames-english">English</button>
+          <button mat-menu-item class="myMenuItem" routerLink="/surnames-ukrainian">Ukrainian</button>
+          <hr style="width:auto;">
+          <button mat-menu-item class="myMenuItem" routerLink="/surnames-translate">Translate</button>
+        </mat-menu>
+      </div>
 
-  <div class="dropdown">
-    <button mat-button [matMenuTriggerFor]="geographicMenu" class="myMenuItem">geographic</button>
-    <mat-menu #geographicMenu="matMenu" yPosition="below" class="myMenu">
-      <button mat-menu-item class="myMenuItem" routerLink="/geographic-english">English</button>
-      <button mat-menu-item class="myMenuItem" routerLink="/geographic-ukrainian">Ukrainian</button>
-      <hr style="width:auto;">
-      <button mat-menu-item class="myMenuItem" routerLink="/geographic-translate">Translate</button>
-    </mat-menu>
+      <div class="dropdown">
+        <button mat-button [matMenuTriggerFor]="geographicMenu" class="myMenuItem">geographic</button>
+        <mat-menu #geographicMenu="matMenu" yPosition="below" class="myMenu">
+          <button mat-menu-item class="myMenuItem" routerLink="/geographic-english">English</button>
+          <button mat-menu-item class="myMenuItem" routerLink="/geographic-ukrainian">Ukrainian</button>
+          <hr style="width:auto;">
+          <button mat-menu-item class="myMenuItem" routerLink="/geographic-translate">Translate</button>
+        </mat-menu>
+      </div>
+    </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

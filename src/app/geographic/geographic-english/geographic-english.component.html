@@ -1,3 +1,17 @@
-<select class="lang-select" size="15">
-  <option *ngFor="let geographicEng of geographicEngs" [ngValue]="geographicEng.id">{{geographicEng.name}}</option>
-</select>
+<div class="main">
+  <div class="child">
+    <select class="lang-select" size="15" [(ngModel)]="selectedValue" (change)="setSelectedObject()">
+      <option *ngFor="let geographicEng of geographicEngs" [ngValue]="geographicEng.id">{{geographicEng.name}}</option>
+    </select>
+  </div>
+  <div class="child" style="width: 100%">
+    <div style="display: block">
+      <p class="name">{{getName()}}</p>
+      <p class="type">&nbsp;&nbsp;&nbsp;{{getGeographicType()}}</p>
+      <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
+    </div>
+  </div>
+</div>
+<div class="child footer">
+  count: {{countValues}}
+</div>
