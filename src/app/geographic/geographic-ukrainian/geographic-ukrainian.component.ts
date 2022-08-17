@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {DataService} from "../../app.dataService";
 import {GeographicUkr} from "../../GeographicUkr";
+import {CaseGeographicUkrLite} from "../../CaseGeographicUkrLite";
 @Component({
   selector : 'app-geographic-ukrainian',
   templateUrl : './geographic-ukrainian.component.html'
@@ -24,11 +25,24 @@ export class GeographicUkrainianComponent {
 
   countValues: number = 0;
 
+  caseGeographicUkrLite: CaseGeographicUkrLite | undefined;
+
   setSelectedObject() {
     if(this.geographicUkrs !== undefined) {
       this.selectedObject = this.geographicUkrs.find((el: any) => {
         return el?.id == this.selectedValue;
       })
+
+      console.log(this.selectedValue);
+
+      this.dataService.getCaseGeographicUkrLite(this.selectedValue).subscribe((data: CaseGeographicUkrLite) => {
+
+        this.caseGeographicUkrLite = data;
+
+        console.log(this.caseGeographicUkrLite);
+      });
+
+
     }
   }
 

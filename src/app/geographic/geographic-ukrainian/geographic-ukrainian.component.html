@@ -11,6 +11,28 @@
         <span class="gender">&nbsp;&nbsp;&nbsp;{{getGeographicGrammaticalGender() !== '' ? '(' + getGeographicGrammaticalGender() + ')' : ''}}</span>
       </p>
       <p style="" class="type">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getGeographicType()}}</p>
+
+
+      <table class="cases" *ngIf="caseGeographicUkrLite !== undefined">
+        <th class="cases">Називний</th>
+        <th class="cases">Родовий</th>
+        <th class="cases">Давальний</th>
+        <th class="cases">Знахідний</th>
+        <th class="cases">Орудний</th>
+        <th class="cases">Місцевий</th>
+        <th class="cases">Кличний</th>
+        <tr>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.nominative : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.genitive : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.dative : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.accusative : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.instrumental : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.prepositional : ''}}</td>
+          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.vocative : ''}}</td>
+        </tr>
+      </table>
+
+
       <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {WordEngLite} from "./WordEngLite";
 import {WordUkrLite} from "./WordUkrLite";
@@ -9,6 +9,7 @@ import {SurnameEng} from "./SurnameEng";
 import {SurnameUkr} from "./SurnameUkr";
 import {GeographicEng} from "./GeographicEng";
 import {GeographicUkr} from "./GeographicUkr";
+import {CaseGeographicUkrLite} from "./CaseGeographicUkrLite";
 
 
 @Injectable({
@@ -51,5 +52,15 @@ export class DataService {
 
   public allUkrainianGeographic(): Observable<GeographicUkr[]> {
     return this.httpClient.get<GeographicUkr[]>(this.REST_API_SERVER + '/geographic/ukr-all');
+  }
+
+  public getCaseGeographicUkrLite(geographicUkrId: number): Observable<CaseGeographicUkrLite> {
+
+    let params = new HttpParams()
+      .set('geographicUkrId', geographicUkrId);
+
+    console.log(params);
+
+    return this.httpClient.get<CaseGeographicUkrLite>(this.REST_API_SERVER + '/geographic/case-ukr', { params: params });
   }
 }
