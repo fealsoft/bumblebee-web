@@ -33,19 +33,27 @@ body {
 
 .footer {
   color: rgba(0, 0, 0, 0.35);
+  font-size: small;
 }
 
 .name {
   font-family: Arial;
   font-weight: bold;
+  margin:2px !important;
 }
 
 .type {
   color : green;
-  font-size: small;
+  font-size: x-small;
   font-style: italic;
 }
 
 .id {
   color : #bdbdbd;
+  font-size: small;
+}
+
+.gender {
+  color : #5d5d5d;
+  font-size: x-small;
 }

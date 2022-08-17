@@ -40,4 +40,8 @@ export class GeographicUkrainianComponent {
     return this.selectedObject !== undefined ? this.selectedObject.geographicType : ""
   }
 
+  getGeographicGrammaticalGender() {
+    return this.selectedObject !== undefined ? this.selectedObject.geographicGrammaticalGender : ""
+  }
+
 }
