@@ -15,6 +15,8 @@ export class GeographicUkrainianComponent {
       this.geographicUkrs = data;
 
       if(this.geographicUkrs !== undefined) {
+        this.selectedValue = this.geographicUkrs[0].id;
+        this.setSelectedObject();
         this.countValues = this.geographicUkrs.length;
       }
     });

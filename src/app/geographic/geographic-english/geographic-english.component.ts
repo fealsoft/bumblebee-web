@@ -14,6 +14,8 @@ export class GeographicEnglishComponent {
       this.geographicEngs = data;
 
       if(this.geographicEngs !== undefined) {
+        this.selectedValue = this.geographicEngs[0].id;
+        this.setSelectedObject();
         this.countValues = this.geographicEngs.length;
       }
     });
