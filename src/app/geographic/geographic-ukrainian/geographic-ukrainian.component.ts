@@ -33,16 +33,9 @@ export class GeographicUkrainianComponent {
         return el?.id == this.selectedValue;
       })
 
-      console.log(this.selectedValue);
-
       this.dataService.getCaseGeographicUkrLite(this.selectedValue).subscribe((data: CaseGeographicUkrLite) => {
-
         this.caseGeographicUkrLite = data;
-
-        console.log(this.caseGeographicUkrLite);
       });
-
-
     }
   }
 

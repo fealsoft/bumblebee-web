@@ -16,7 +16,6 @@ export class GeographicEnglishComponent {
       if(this.geographicEngs !== undefined) {
         this.countValues = this.geographicEngs.length;
       }
-
     });
   }
 

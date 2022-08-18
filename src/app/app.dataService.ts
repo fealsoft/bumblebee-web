@@ -59,8 +59,14 @@ export class DataService {
     let params = new HttpParams()
       .set('geographicUkrId', geographicUkrId);
 
-    console.log(params);
-
     return this.httpClient.get<CaseGeographicUkrLite>(this.REST_API_SERVER + '/geographic/case-ukr', { params: params });
+  }
+
+  public getGeographicTranslate(geographicEngId: number): Observable<GeographicUkr> {
+
+    let params = new HttpParams()
+      .set('geographicEngId', geographicEngId);
+
+    return this.httpClient.get<GeographicUkr>(this.REST_API_SERVER + '/geographic/translate', { params: params });
   }
 }
