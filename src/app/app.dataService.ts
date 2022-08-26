@@ -1,15 +1,15 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {WordEngLite} from "./WordEngLite";
-import {WordUkrLite} from "./WordUkrLite";
+import {WordEng} from "./WordEng";
+import {WordUkr} from "./WordUkr";
 import {NameEng} from "./NameEng";
 import {NameUkr} from "./NameUkr";
 import {SurnameEng} from "./SurnameEng";
 import {SurnameUkr} from "./SurnameUkr";
 import {GeographicEng} from "./GeographicEng";
 import {GeographicUkr} from "./GeographicUkr";
-import {CaseGeographicUkrLite} from "./CaseGeographicUkrLite";
+import {CaseGeographicUkr} from "./CaseGeographicUkr";
 
 
 @Injectable({
@@ -22,12 +22,12 @@ export class DataService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public allEnglishWords(): Observable<WordEngLite[]> {
-    return this.httpClient.get<WordEngLite[]>(this.REST_API_SERVER + '/words/eng-all');
+  public allEnglishWords(): Observable<WordEng[]> {
+    return this.httpClient.get<WordEng[]>(this.REST_API_SERVER + '/words/eng-all');
   }
 
-  public allUkrainianWords(): Observable<WordUkrLite[]> {
-    return this.httpClient.get<WordUkrLite[]>(this.REST_API_SERVER + '/words/ukr-all');
+  public allUkrainianWords(): Observable<WordUkr[]> {
+    return this.httpClient.get<WordUkr[]>(this.REST_API_SERVER + '/words/ukr-all');
   }
 
   public allEnglishNames(): Observable<NameEng[]> {
@@ -54,12 +54,12 @@ export class DataService {
     return this.httpClient.get<GeographicUkr[]>(this.REST_API_SERVER + '/geographic/ukr-all');
   }
 
-  public getCaseGeographicUkrLite(geographicUkrId: number): Observable<CaseGeographicUkrLite> {
+  public getCaseGeographicUkr(geographicUkrId: number): Observable<CaseGeographicUkr> {
 
     let params = new HttpParams()
       .set('geographicUkrId', geographicUkrId);
 
-    return this.httpClient.get<CaseGeographicUkrLite>(this.REST_API_SERVER + '/geographic/case-ukr', { params: params });
+    return this.httpClient.get<CaseGeographicUkr>(this.REST_API_SERVER + '/geographic/case-ukr', { params: params });
   }
 
   public getGeographicTranslate(geographicEngId: number): Observable<GeographicUkr> {

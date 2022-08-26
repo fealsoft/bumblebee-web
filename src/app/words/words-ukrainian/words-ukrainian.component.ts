@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {WordUkrLite} from "../../WordUkrLite";
+import {WordUkr} from "../../WordUkr";
 import {DataService} from "../../app.dataService";
 @Component({
   selector : 'app-words-ukrainian',
@@ -7,11 +7,11 @@ import {DataService} from "../../app.dataService";
 })
 export class WordsUkrainianComponent {
 
-  wordUkrLites: WordUkrLite[] | undefined;
+  wordUkrs: WordUkr[] | undefined;
 
   constructor(private dataService: DataService) {
-    this.dataService.allUkrainianWords().subscribe((data: WordUkrLite[]) => {
-      this.wordUkrLites = data;
+    this.dataService.allUkrainianWords().subscribe((data: WordUkr[]) => {
+      this.wordUkrs = data;
     });
   }
 

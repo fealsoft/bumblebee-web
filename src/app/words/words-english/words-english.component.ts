@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import {DataService} from "../../app.dataService";
-import {WordEngLite} from "../../WordEngLite";
+import {WordEng} from "../../WordEng";
 @Component({
   selector : 'app-words-english',
   templateUrl : './words-english.component.html'
 })
 export class WordsEnglishComponent {
 
-  wordEngLites: WordEngLite[] | undefined;
+  wordEngs: WordEng[] | undefined;
 
   constructor(private dataService: DataService) {
-    this.dataService.allEnglishWords().subscribe((data: WordEngLite[]) => {
-      this.wordEngLites = data;
+    this.dataService.allEnglishWords().subscribe((data: WordEng[]) => {
+      this.wordEngs = data;
     });
   }
 

@@ -1,4 +1,4 @@
-export class CaseGeographicUkrLite {
+export class CaseGeographicUkr {
   id: string | undefined;
   geographicUkrId: string | undefined;
   nominative: string | undefined;

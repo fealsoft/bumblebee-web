@@ -13,7 +13,7 @@
       <p style="" class="type">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getGeographicType()}}</p>
 
 
-      <table class="cases" *ngIf="caseGeographicUkrLite !== undefined">
+      <table class="cases" *ngIf="caseGeographicUkr !== undefined">
         <th class="cases">Називний</th>
         <th class="cases">Родовий</th>
         <th class="cases">Давальний</th>
@@ -22,13 +22,13 @@
         <th class="cases">Місцевий</th>
         <th class="cases">Кличний</th>
         <tr>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.nominative : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.genitive : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.dative : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.accusative : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.instrumental : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.prepositional : ''}}</td>
-          <td class="cases">{{caseGeographicUkrLite !== undefined ? caseGeographicUkrLite.vocative : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.nominative : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.genitive : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.dative : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.accusative : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.instrumental : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.prepositional : ''}}</td>
+          <td class="cases">{{caseGeographicUkr !== undefined ? caseGeographicUkr.vocative : ''}}</td>
         </tr>
       </table>
 
