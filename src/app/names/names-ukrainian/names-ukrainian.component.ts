@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {DataService} from "../../app.dataService";
 import {NameUkr} from "../../NameUkr";
+import {CaseNameUkr} from "../../CaseNameUkr";
+import {CaseGeographicUkr} from "../../CaseGeographicUkr";
 @Component({
   selector : 'app-names-ukrainian',
   templateUrl : './names-ukrainian.component.html'
@@ -26,11 +28,18 @@ export class NamesUkrainianComponent {
 
   countValues: number = 0;
 
+  caseNameUkr: CaseNameUkr | undefined;
+
+
   setSelectedObject() {
     if(this.nameUkrs !== undefined) {
       this.selectedObject = this.nameUkrs.find((el: any) => {
         return el?.id == this.selectedValue;
       })
+
+      this.dataService.getCaseNameUkr(this.selectedValue).subscribe((data: CaseNameUkr) => {
+        this.caseNameUkr = data;
+      });
     }
   }
 

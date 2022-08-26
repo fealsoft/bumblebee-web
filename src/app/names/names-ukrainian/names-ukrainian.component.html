@@ -8,7 +8,30 @@
     <div style="display: block">
       <p class="name">{{getName()}}</p>
       <p class="type">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getGenderName()}}</p>
+
+      <table class="cases" *ngIf="caseNameUkr !== undefined">
+        <th class="cases">Називний</th>
+        <th class="cases">Родовий</th>
+        <th class="cases">Давальний</th>
+        <th class="cases">Знахідний</th>
+        <th class="cases">Орудний</th>
+        <th class="cases">Місцевий</th>
+        <th class="cases">Кличний</th>
+        <tr>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.nominative : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.genitive : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.dative : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.accusative : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.instrumental : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.prepositional : ''}}</td>
+          <td class="cases">{{caseNameUkr !== undefined ? caseNameUkr.vocative : ''}}</td>
+        </tr>
+      </table>
+
+      <br>
+
       <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
+
     </div>
   </div>
 </div>
