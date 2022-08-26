@@ -1,1 +1,29 @@
-<p>names-translate component</p>
+<div class="main">
+  <div class="child">
+    <select class="lang-select" size="15" [(ngModel)]="selectedValue" (change)="getTranslate()">
+      <option *ngFor="let nameEng of nameEngs" [ngValue]="nameEng.id">{{nameEng.name}}</option>
+    </select>
+  </div>
+  <div class="child" style="width: 100%">
+    <div style="display: block">
+      <p class="name">{{getName()}}</p>
+      <p class="type">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getGenderName()}}</p>
+      <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
+      <br>
+      <div class="translated">
+          <div *ngFor="let translateNameUkr of translateNameUkrs">
+            <p class="name">
+              <span class="name">{{translateNameUkr.nameUkr !== undefined ? translateNameUkr.nameUkr.name : ''}}</span>
+            </p>
+              <span class="type">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{translateNameUkr.nameUkr !== undefined ? translateNameUkr.nameUkr.genderName : ''}}</span>
+
+
+              <div class="id">&nbsp;{{translateNameUkr.nameUkr !== undefined ? 'id:' + translateNameUkr.nameUkr.id : ''}}</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="child footer">
+  count: {{countValues}}
+</div>
