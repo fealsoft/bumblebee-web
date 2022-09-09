@@ -1,0 +1,25 @@
+export class CaseSurnameUkr {
+  id: string | undefined;
+  nameUkrId: string | undefined;
+  nominative: string | undefined;
+  genitive: string | undefined;
+  dative: string | undefined;
+  accusative: string | undefined;
+  instrumental: string | undefined;
+  prepositional: string | undefined;
+  vocative: string | undefined;
+  nominativeFeminine: string | undefined;
+  genitiveFeminine: string | undefined;
+  dativeFeminine: string | undefined;
+  accusativeFeminine: string | undefined;
+  instrumentalFeminine: string | undefined;
+  prepositionalFeminine: string | undefined;
+  vocativeFeminine: string | undefined;
+  nominativePlural: string | undefined;
+  genitivePlural: string | undefined;
+  dativePlural: string | undefined;
+  accusativePlural: string | undefined;
+  instrumentalPlural: string | undefined;
+  prepositionalPlural: string | undefined;
+  vocativePlural: string | undefined;
+}

@@ -1,3 +1,58 @@
-<select class="lang-select" size="15">
-  <option *ngFor="let surnameUkr of surnameUkrs" [ngValue]="surnameUkr.id">{{surnameUkr.surname}}</option>
-</select>
+<div class="main">
+  <div class="child">
+    <select class="lang-select" size="15" [(ngModel)]="selectedValue" (change)="setSelectedObject()">
+      <option *ngFor="let surnameUkr of surnameUkrs" [ngValue]="surnameUkr.id">{{surnameUkr.surname}}</option>
+    </select>
+  </div>
+  <div class="child" style="width: 100%">
+    <div style="display: block">
+      <p class="name">{{getSurname()}}</p>
+
+      <br>
+
+      <table class="cases" *ngIf="caseSurnameUkr !== undefined">
+        <th class="cases">Називний</th>
+        <th class="cases">Родовий</th>
+        <th class="cases">Давальний</th>
+        <th class="cases">Знахідний</th>
+        <th class="cases">Орудний</th>
+        <th class="cases">Місцевий</th>
+        <th class="cases">Кличний</th>
+        <tr>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.nominative : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.genitive : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.dative : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.accusative : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.instrumental : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.prepositional : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.vocative : ''}}</td>
+        </tr>
+        <tr>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.nominativeFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.genitiveFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.dativeFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.accusativeFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.instrumentalFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.prepositionalFeminine : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.vocativeFeminine : ''}}</td>
+        </tr>
+        <tr>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.nominativePlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.genitivePlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.dativePlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.accusativePlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.instrumentalPlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.prepositionalPlural : ''}}</td>
+          <td class="cases">{{caseSurnameUkr !== undefined ? caseSurnameUkr.vocativePlural : ''}}</td>
+        </tr>
+      </table>
+
+      <br>
+
+      <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
+    </div>
+  </div>
+</div>
+<div class="child footer">
+  count: {{countValues}}
+</div>
