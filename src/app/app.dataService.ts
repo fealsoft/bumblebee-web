@@ -13,6 +13,7 @@ import {CaseGeographicUkr} from "./CaseGeographicUkr";
 import {CaseNameUkr} from "./CaseNameUkr";
 import {TranslateNameUkr} from "./TranslateNameUkr";
 import {CaseSurnameUkr} from "./CaseSurnameUkr";
+import {TranslateSurnameUkr} from "./TranslateSurnameUkr";
 
 
 @Injectable({
@@ -71,6 +72,14 @@ export class DataService {
       .set('surnameUkrId', surnameUkrId);
 
     return this.httpClient.get<CaseSurnameUkr>(this.REST_API_SERVER + '/surnames/case-ukr', { params: params });
+  }
+
+  public getSurnameTranslate(surnameEngId: number): Observable<TranslateSurnameUkr> {
+
+    let params = new HttpParams()
+      .set('surnameEngId', surnameEngId);
+
+    return this.httpClient.get<TranslateSurnameUkr>(this.REST_API_SERVER + '/surnames/translate', { params: params });
   }
 
   public allEnglishGeographic(): Observable<GeographicEng[]> {

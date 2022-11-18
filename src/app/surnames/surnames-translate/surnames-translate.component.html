@@ -1,1 +1,27 @@
-<p>surnames-translate component</p>
+<div class="main">
+  <div class="child">
+    <select class="lang-select" size="15"  [(ngModel)]="selectedValue" (change)="getTranslate()">
+      <option *ngFor="let surnameEng of surnameEngs" [ngValue]="surnameEng.id">{{surnameEng.surname}}</option>
+    </select>
+  </div>
+  <div class="child" style="width: 100%">
+    <div style="display: block">
+      <p class="name">{{getSurname()}}</p>
+      <p class="name">{{getPlural()}}</p>
+      <p class="id">{{selectedValue !== undefined ? 'id:' + selectedValue : ''}}</p>
+    <br>
+    <div class="translated">
+      <div>
+        <p class="name">
+          <span class="name">{{(translateSurnameUkr !== undefined && translateSurnameUkr.surnameUkr !== undefined) ? translateSurnameUkr.surnameUkr.surname : ''}}</span>
+        </p>
+
+        <div class="id">&nbsp;{{(translateSurnameUkr !== undefined && translateSurnameUkr.surnameUkr !== undefined) ? 'id:' + translateSurnameUkr.surnameUkr.id : ''}}</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="child footer">
+  count: {{countValues}}
+</div>
