@@ -12,7 +12,30 @@ export class WordsEnglishComponent {
   constructor(private dataService: DataService) {
     this.dataService.allEnglishWords().subscribe((data: WordEng[]) => {
       this.wordEngs = data;
+
+      if(this.wordEngs !== undefined) {
+        this.selectedValue = this.wordEngs[0].id;
+        this.setSelectedObject();
+        this.countValues = this.wordEngs.length;
+      }
     });
+  }
+
+  selectedValue: any | undefined;
+  selectedObject: any | undefined;
+
+  countValues: number = 0;
+
+  setSelectedObject() {
+    if(this.wordEngs !== undefined) {
+      this.selectedObject = this.wordEngs.find((el: any) => {
+        return el?.id == this.selectedValue;
+      })
+    }
+  }
+
+  getWord() {
+    return this.selectedObject !== undefined ? this.selectedObject.name : ""
   }
 
 }

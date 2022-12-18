@@ -1,3 +1,15 @@
-<select class="lang-select" size="15">
-  <option *ngFor="let wordEng of wordEngs" [ngValue]="wordEng.id">{{wordEng.name}}</option>
-</select>
+<div class="main">
+  <div class="child">
+    <select class="lang-select" size="15" [(ngModel)]="selectedValue" (change)="setSelectedObject()">
+      <option *ngFor="let wordEng of wordEngs" [ngValue]="wordEng.id">{{wordEng.name}}</option>
+    </select>
+  </div>
+  <div class="child" style="width: 100%">
+    <div style="display: block">
+      <p class="name">{{getWord()}}</p>
+    </div>
+  </div>
+</div>
+<div class="child footer">
+  count: {{countValues}}
+</div>
